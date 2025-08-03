@@ -376,3 +376,5 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python,jetbrains+all,jetbrains+iml,pycharm+all
 
 repomix-output.xml
+CLAUDE.md
+.claude
