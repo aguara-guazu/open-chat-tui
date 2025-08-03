@@ -1,0 +1,497 @@
+/* Chat TUI Styling - Modern Textual Compatible */
+
+/* Main Screen Layout */
+Screen {
+    background: $background;
+    layout: horizontal;
+}
+
+/* Header and Footer */
+Header {
+    dock: top;
+    height: 1;
+    background: $primary;
+    color: $text;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: $primary;
+    color: $text;
+}
+
+/* Sidebar styling */
+#sidebar {
+    dock: left;
+    width: 20;
+    background: $surface;
+    border-right: solid $primary;
+    padding: 1 0;
+}
+
+.sidebar-title {
+    color: $text;
+    text-style: bold;
+    background: $primary;
+    padding: 0 1;
+    margin: 0 0 1 0;
+    text-align: center;
+}
+
+.menu-option {
+    padding: 0 1;
+    margin: 0 0 1 0;
+    background: $surface;
+    color: $text;
+    border: none;
+}
+
+.menu-option:hover {
+    background: $primary-darken-1;
+    color: $text;
+}
+
+.menu-option:focus {
+    background: $accent;
+    color: $text;
+}
+
+/* Main chat area */
+#main-area {
+    background: $background;
+    height: 100%;
+    width: 1fr;
+}
+
+/* Chat messages area */
+#chat-area {
+    height: 1fr;
+    background: $background;
+    border: solid $primary;
+    margin: 0 1 1 0;
+    padding: 1;
+}
+
+/* Enhanced Chat Messages */
+EnhancedChatMessage {
+    margin: 0 0 1 0;
+    padding: 1;
+    height: auto;
+    background: $surface;
+    border-left: thick $accent;
+}
+
+EnhancedChatMessage.user {
+    background: $primary-lighten-1;
+    border-left: thick $success;
+}
+
+EnhancedChatMessage.assistant {
+    background: $surface;
+    border-left: thick $accent;
+}
+
+EnhancedChatMessage.system {
+    background: $warning-darken-2;
+    border-left: thick $warning;
+    color: $warning-lighten-3;
+}
+
+EnhancedChatMessage.error {
+    background: $error-darken-2;
+    border-left: thick $error;
+    color: $error-lighten-3;
+}
+
+/* Streaming message */
+StreamingChatMessage {
+    margin: 0 0 1 0;
+    padding: 1;
+    height: auto;
+    background: $surface;
+    border-left: thick $accent;
+}
+
+SystemMessage {
+    margin: 0 0 1 0;
+    padding: 1;
+    height: auto;
+    background: $warning-darken-2;
+    border-left: thick $warning;
+    color: $warning-lighten-3;
+}
+
+ErrorMessage {
+    margin: 0 0 1 0;
+    padding: 1;
+    height: auto;
+    background: $error-darken-2;
+    border-left: thick $error;
+    color: $error-lighten-3;
+}
+
+/* Input area */
+#message-input {
+    dock: bottom;
+    height: 3;
+    margin: 0 1 0 0;
+    border: solid $primary;
+}
+
+Input {
+    background: $surface;
+    color: $text;
+}
+
+Input:focus {
+    border: solid $accent;
+}
+
+/* Options Dialog */
+.dialog-container {
+    width: 80;
+    height: 30;
+    background: $surface;
+    border: solid $primary;
+    padding: 1;
+}
+
+.dialog-title {
+    text-align: center;
+    text-style: bold;
+    background: $primary;
+    color: $text;
+    padding: 0 1;
+    margin: 0 0 1 0;
+}
+
+.connection-status {
+    height: auto;
+    margin: 1 0;
+    padding: 1;
+    border-left: thick $success;
+}
+
+.connection-status.connected {
+    border-left: thick $success;
+    background: $success-darken-3;
+}
+
+.connection-status.disconnected {
+    border-left: thick $error;
+    background: $error-darken-3;
+}
+
+.connection-status.connecting {
+    border-left: thick $warning;
+    background: $warning-darken-3;
+}
+
+.config-section {
+    height: auto;
+    border: solid $accent;
+    padding: 1;
+    margin: 1 0;
+}
+
+/* Model Selector */
+ModelSelector {
+    height: auto;
+    border: solid $accent;
+    padding: 1;
+}
+
+.model-info {
+    height: auto;
+    background: $surface;
+    border: solid $primary;
+    padding: 1;
+    margin: 1 0;
+}
+
+.pull-section {
+    height: auto;
+    border: solid $warning;
+    padding: 1;
+    margin: 1 0;
+}
+
+.section-title {
+    text-style: bold;
+    margin: 0 0 1 0;
+    color: $accent;
+}
+
+/* Tabs */
+TabbedContent {
+    height: 1fr;
+}
+
+TabPane {
+    padding: 1;
+    background: $background;
+}
+
+Tab {
+    background: $surface;
+    color: $text;
+}
+
+Tab:hover {
+    background: $primary-darken-1;
+}
+
+Tab.-active {
+    background: $background;
+    text-style: bold;
+}
+
+/* Buttons */
+Button {
+    margin: 0 1;
+    padding: 0 2;
+    border: solid $accent;
+    background: $surface;
+    color: $text;
+}
+
+Button:hover {
+    background: $accent;
+    color: $background;
+}
+
+Button:focus {
+    background: $accent;
+    color: $background;
+    text-style: bold;
+}
+
+Button.-success {
+    border: solid $success;
+    background: $success-darken-2;
+    color: $text;
+}
+
+Button.-success:hover {
+    background: $success;
+    color: $background;
+}
+
+Button.-error {
+    border: solid $error;
+    background: $error-darken-2;
+    color: $text;
+}
+
+Button.-error:hover {
+    background: $error;
+    color: $background;
+}
+
+Button.-default {
+    border: solid $primary;
+    background: $primary-darken-2;
+    color: $text;
+}
+
+Button.-default:hover {
+    background: $primary;
+    color: $background;
+}
+
+/* Select widgets */
+Select {
+    background: $surface;
+    color: $text;
+    border: solid $primary;
+}
+
+Select:focus {
+    border: solid $accent;
+}
+
+SelectOverlay {
+    background: $surface;
+    border: solid $primary;
+}
+
+SelectOption {
+    background: $surface;
+    color: $text;
+    padding: 0 1;
+}
+
+SelectOption:hover {
+    background: $accent;
+    color: $background;
+}
+
+SelectOption.-highlighted {
+    background: $accent;
+    color: $background;
+}
+
+/* Switch widgets */
+Switch {
+    background: $surface;
+    border: solid $primary;
+}
+
+Switch.-on {
+    background: $success-darken-2;
+}
+
+/* Labels */
+Label {
+    color: $text;
+    margin: 0 0 0 0;
+    text-style: bold;
+}
+
+/* Text colors and styles */
+Static {
+    color: $text;
+}
+
+.text-muted {
+    color: $text-muted;
+}
+
+.text-accent {
+    color: $accent;
+}
+
+.text-success {
+    color: $success;
+}
+
+.text-error {
+    color: $error;
+}
+
+.text-warning {
+    color: $warning;
+}
+
+.text-bold {
+    text-style: bold;
+}
+
+.text-italic {
+    text-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Status Bar */
+StatusBar {
+    dock: bottom;
+    height: 1;
+    background: $primary;
+    color: $text;
+    layout: horizontal;
+}
+
+.status-item {
+    height: 1;
+    padding: 0 1;
+    background: $primary;
+    color: $text;
+}
+
+.status-connection.connected {
+    background: $success;
+    color: $text;
+}
+
+.status-connection.disconnected {
+    background: $error;
+    color: $text;
+}
+
+.status-connection.connecting {
+    background: $warning;
+    color: $text;
+}
+
+.status-model {
+    background: $accent;
+    color: $text;
+}
+
+.status-memory {
+    background: $surface;
+    color: $text;
+}
+
+.status-spacer {
+    background: $primary;
+    color: $text;
+    width: 1fr;
+}
+
+/* Loading indicators */
+.loading {
+    text-style: italic;
+    color: $text-muted;
+}
+
+/* Focus indicators */
+*:focus {
+    border: solid $accent;
+}
+
+/* Responsive design for different terminal sizes */
+/* Use Textual's HORIZONTAL_BREAKPOINTS instead of @media queries */
+
+/* Narrow terminal styles (up to 80 columns) */
+App.-narrow #sidebar {
+    width: 15;
+}
+
+/* Very narrow terminal styles (up to 60 columns) */
+App.-very-narrow #sidebar {
+    display: none;
+}
+
+/* Animations - simplified for Textual */
+Button {
+    /* Textual handles transitions automatically */
+}
+
+.menu-option {
+    /* Textual handles transitions automatically */
+}
+
+/* Dark theme overrides */
+App.-dark {
+    background: #1a1a1a;
+}
+
+App.-dark EnhancedChatMessage {
+    background: #2a2a2a;
+}
+
+App.-dark .menu-option {
+    background: #2a2a2a;
+}
+
+/* Light theme overrides */
+App.-light {
+    background: #ffffff;
+}
+
+App.-light EnhancedChatMessage {
+    background: #f5f5f5;
+}
+
+App.-light .menu-option {
+    background: #f5f5f5;
+}
